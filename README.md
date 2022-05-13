@@ -1,2 +1,2 @@
-# Calculatorwitjs
+# Calculatorwithjs
 This is basic calculator 
