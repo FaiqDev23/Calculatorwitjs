@@ -53,7 +53,20 @@ $(document).ready(function(){
                 
        }
                resultContent.fadeIn();
-               resultContent.html(result);
+               resultContent.html(result.toFixed(2));
+    }
+
+    function clearCalc(){
+        firstNum="";
+        secondNum="";
+        operation="";
+        result="";
+        nextStep=false;
+
+        operationContent.fadeOut();
+        firstNumContent.fadeOut();
+        secondNumContent.fadeOut();
+        resultContent.fadeOut();
     }
    $(document).on("click",".calc-button",function(){
         
@@ -71,7 +84,7 @@ $(document).ready(function(){
     }else if (button.hasClass("calc-equal")){
             resultEqual()
     }else{
-        console.log("Bu clear buttonudur")
+          clearCalc()
     }
     
    });
