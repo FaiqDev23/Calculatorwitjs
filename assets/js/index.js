@@ -33,6 +33,7 @@ $(document).ready(function(){
        operation=opr;
        nextStep=true;
        console.log(operation);
+       operationContent.fadeIn();
    }
 
    $(document).on("click",".calc-button",function(){
@@ -48,7 +49,8 @@ $(document).ready(function(){
       addNumber(value)
     }
     else if(button.hasClass("calc-operation")){
-        console.log("Bu operatordur")
+            console.log("Bu operatordur")
+            chooseOperator(value);
     }else if (button.hasClass("calc-equal")){
         console.log("Bu beraberdir")
     }else{
