@@ -30,7 +30,9 @@ $(document).ready(function(){
    }
 
    function chooseOperator(opr){
-       operation=opr
+       operation=opr;
+       nextStep=true;
+       console.log(operation);
    }
 
    $(document).on("click",".calc-button",function(){
