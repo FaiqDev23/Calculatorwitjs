@@ -16,7 +16,7 @@ $(document).ready(function(){
 
    function addNumber(num){
        if(nextStep){
-           secondNum+=true
+           secondNum+=num
            console.log("ikinci reqem",secondNum);
            secondNumContent.fadeIn();
            secondNumContent.html(secondNum)
@@ -34,6 +34,7 @@ $(document).ready(function(){
        nextStep=true;
        console.log(operation);
        operationContent.fadeIn();
+       operationContent.html(operation);
    }
 
    function resultEqual(){
@@ -63,14 +64,12 @@ $(document).ready(function(){
 
 
     if(button.hasClass("calc-num")){
-      console.log("Bu reqemdir")    
       addNumber(value)
     }
     else if(button.hasClass("calc-operation")){
-            console.log("Bu operatordur")
             chooseOperator(value);
     }else if (button.hasClass("calc-equal")){
-        console.log("Bu beraberdir")
+            resultEqual()
     }else{
         console.log("Bu clear buttonudur")
     }
