@@ -36,6 +36,24 @@ $(document).ready(function(){
        operationContent.fadeIn();
    }
 
+   function resultEqual(){
+       switch(operation){
+           case"+":
+           result = parseInt(firstNum) + +secondNum;
+           break;
+           case"-":
+           result = +firstNum - +secondNum;
+           break;
+           case"*":
+           result = +firstNum * +secondNum;
+           break;
+           default:
+               result= +firstNum / +secondNum;
+                
+       }
+               resultContent.fadeIn();
+               resultContent.html(result);
+    }
    $(document).on("click",".calc-button",function(){
         
     let button=$(this)
